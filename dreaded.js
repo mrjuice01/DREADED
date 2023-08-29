@@ -185,7 +185,7 @@ if (badwordkick === 'TRUE' && isBotAdmin && !isAdmin && body && (new RegExp('\\b
         case "help":
         case "menu":
 
-                       client.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/d6dab955fbaa42fce2280.jpg' }, caption: `𝑫𝒓𝒆𝒂𝒅𝒆𝒅 𝑩𝒐𝒕\n\nHello ${m.pushName}.\nThis is Dreaded Bot, a simple whatsApp Bot! My prefix is ${prefix} and below are the usable commands.
+                       client.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/cff74abe5d903b1ba6ddc.jpg' }, caption: `𝗕𝗮𝘆𝗠𝗮𝘅 𝗔𝗜\n\nHello ${m.pushName}.\nIm BayMax Your Personal Educational AI Chat bot! My prefix is ${prefix} and below are the usable commands.
   
   𝐀𝐃𝐌𝐈𝐍 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒
   
@@ -193,29 +193,22 @@ if (badwordkick === 'TRUE' && isBotAdmin && !isAdmin && body && (new RegExp('\\b
 
   𝐆𝐄𝐍𝐄𝐑𝐀𝐋 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒
   
-  sticker, toimg, song, play, yts, ytmp3, ytmp4, lyrics,  mix, script, owner, dp, gpt, ai-img, credits
-
-  𝐎𝐖𝐍𝐄𝐑 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒
+  sticker, toimg, song, play, lyrics,  mix, owner, dp, gpt, ai-img
   
- broadcast, block, unblock, admin, botpp, join
-  
-
-       ------- 𝐸𝑛𝑑 ------- 
+          ------- 𝐸𝑛𝑑 ------- 
   
                𝗡𝗼𝘁𝗲: 
+               
+ - This bot Was built to help mainly in Education f School work                      
   
- - This bot uses baileys and nodejs technology with no database configuration.
+ - The bot was built with ai tech meaning it can respond to any question. 
  
- - Do not call or spam the bot! 🦄 
+ - Abusing this bot or missusing it in any actions like Political or +18 censored information will result in permanent ban.
  
- - Antilink is automatically active.
+ - Do not call or spam the bot! 
  
- - AntiBadword might be active depending on the owner configuration of the variables
 
-
-      Enjoy 💐 シ︎
- 
- 
+      ©𝖬ʀ 𝖩ᴜɪᴄᴇ 𝖮𝖥𝖢 シ︎ 
    
     
  `, fileLength: "9999999999999999999999"}, { quoted: m }); 
@@ -231,25 +224,6 @@ if (badwordkick === 'TRUE' && isBotAdmin && !isAdmin && body && (new RegExp('\\b
  m.reply('Promoted To Admin<🥇'); 
           }
           break;
-
-case "remove": case "kick": { 
-  
-                 if (!m.isGroup) throw group; 
-  if (!isBotAdmin) throw botAdmin; 
-  if (!isAdmin) throw admin; 
-  
-  
-  
-                 let users = m.mentionedJid[0] ? m.mentionedJid : m.quoted ? [m.quoted.sender] : [text.replace(/[^0-9]/g, '')+'@s.whatsapp.net']; 
- if (!users) throw NotOwner; 
- if (users  == client.decodeJid(client.user.id)) throw 'Bot cannot remove itself 😡';
- if (users == Owner) { m.reply('Its owner number')}; 
-                 await client.groupParticipantsUpdate(m.chat, users, 'remove'); 
-     m.reply('Successfully removed!'); 
-         } 
-  
-  break;
- 
  case "close": case "mute": { 
   
                  if (!m.isGroup) throw group; 
@@ -449,12 +423,6 @@ case "remove": case "kick": {
  client.sendMessage(m.chat, { image: { url: pp2}, caption: bar, fileLength: "999999999999"}, { quoted: m}); 
  } 
  break;
-
-case "credits": 
-  
-              client.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c75efecf7f0aef851fc02.jpg' }, caption: `𝑪𝑹𝑬𝑫𝑰𝑻𝑺\n\n -Dika Ardnt ➪ Indonesia\n - Writing the base code using case method\nhttps://github.com/DikaArdnt\n\n -Adiwajshing ➪ India\n - Writing and Coding the bot's library (baileys)\nhttps://github.com/WhiskeySockets/Baileys\n\n -WAWebSockets Discord Server community\n-Maintaining and reverse engineering the Web Sockets\nhttps://discord.gg/WeJM5FP9GG\n\n𝐷𝑟𝑒𝑎𝑑𝑒𝑑 𝐵𝑜𝑡 シ︎`}); 
- break; 
- 
           case "song": { 
  const getRandom = (ext) => { 
    return `${Math.floor(Math.random() * 10000)}${ext}`; 
@@ -610,145 +578,6 @@ break
             reply(e.toString())
         }
     }
-break;
-
-case 'yts': case 'ytsearch': {
- 
- if (!args.join(" ")) return reply(`Example : yts Be Alright`)
- let yts = require("youtube-yts")
- let search = await yts(args.join(" "))
- let teks = '```YouTube search Engine ```\n\n Search Term: '+text+'\n\n'
- let no = 1
- for (let i of search.all) {
- teks += `Result No : ${no++}\n\nTitle : ${i.title}\n\nViews : ${i.views}\n\nDuration : ${i.timestamp}\n\nUploaded : ${i.ago}\n\nAuthor : ${i.author.name}\n\nUrl : ${i.url}\n\n\n-----------------------------------------------------------------------------\n\n\n`
- }
- client.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  caption: teks }, { quoted: m })
- }
-
-
- break;
-
-
-case 'ytmp3':
-case 'yta': {
-        const getRandom = (ext) => {
-            return `${Math.floor(Math.random() * 10000)}${ext}`;
-        };
-        if (args.length === 0) {
-            reply(`URL is empty! \nSend ${prefix}ytmp3 url`);
-            return;
-        }
-        try {
-            let urlYt = args[0];
-            if (!urlYt.startsWith("http")) {
-                reply(`Youtube link?`);
-                return;
-            }
-            let infoYt = await ytdl.getInfo(urlYt);
-            //30 MIN
-            if (infoYt.videoDetails.lengthSeconds >= 1800) {
-                reply(`Video too big!`);
-                return;
-            }
-            let titleYt = infoYt.videoDetails.title;
-            let randomName = getRandom(".mp3");
-            const stream = ytdl(urlYt, {
-                    filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
-                })
-                .pipe(fs.createWriteStream(`./${randomName}`));
-            console.log("Audio downloading ->", urlYt);
-            // reply("Downloading.. This may take upto 5 min!");
-            await new Promise((resolve, reject) => {
-                stream.on("error", reject);
-                stream.on("finish", resolve);
-            });
-            
-            let stats = fs.statSync(`./${randomName}`);
-            let fileSizeInBytes = stats.size;
-            // Convert the file size to megabytes (optional)
-            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-            console.log("Audio downloaded ! Size: " + fileSizeInMegabytes);
-            if (fileSizeInMegabytes <= 40) {
-                //sendFile(from, fs.readFileSync(`./${randomName}`), msg, { audio: true, jpegThumbnail: (await getBuffer(dl.meta.image)).buffer, unlink: true })
-                await client.sendMessage(
-                    from, {
-                        document: fs.readFileSync(`./${randomName}`),
-                        mimetype: "audio/mpeg",
-                        fileName: titleYt + ".mp3",
-                    }, {
-                        quoted: m
-                    }
-                );
-            } else {
-                reply(`File size bigger than 40mb.`);
-            }
-            fs.unlinkSync(`./${randomName}`);
-        } catch (e) {
-            reply(e.toString())
-        }
-    }
-
-break  
-case 'ytmp4':
-case 'ytvideo':
-case 'ytv':
-        const getRandom = (ext) => {
-            return `${Math.floor(Math.random() * 10000)}${ext}`;
-        };
-        if (args.length === 0) {
-            reply(` URL is empty! \nSend ${prefix}ytmp4 url`);
-            return;
-        }
-        try {
-            let urlYt = args[0];
-            if (!urlYt.startsWith("http")) {
-                reply(`Give youtube link!`);
-                return;
-            }
-            let infoYt = await ytdl.getInfo(urlYt);
-            //30 MIN
-            if (infoYt.videoDetails.lengthSeconds >= 1800) {
-                reply(`Video file too big!`);
-                return;
-            }
-            let titleYt = infoYt.videoDetails.title;
-            let randomName = getRandom(".mp4");
-            
-            const stream = ytdl(urlYt, {
-                    filter: (info) => info.itag == 22 || info.itag == 18,
-                })
-                .pipe(fs.createWriteStream(`./${randomName}`));
-            //22 - 1080p/720p and 18 - 360p
-            console.log("Video downloading ->", urlYt);
-            // reply("Downloading.. This may take upto 5 min!");
-            await new Promise((resolve, reject) => {
-                stream.on("error", reject);
-                stream.on("finish", resolve);
-            });
-            
-            let stats = fs.statSync(`./${randomName}`);
-            let fileSizeInBytes = stats.size;
-            // Convert the file size to megabytes (optional)
-            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-            console.log("Video downloaded ! Size: " + fileSizeInMegabytes);
-            if (fileSizeInMegabytes <= 100) {
-                client.sendMessage(
-                    from, {
-                        video: fs.readFileSync(`./${randomName}`),
-                        caption: `${titleYt}`,
-                    }, {
-                        quoted: m
-                    }
-                );
-            } else {
-                reply(`❌ File size bigger than 40mb.`);
-            }
-            
-            fs.unlinkSync(`./${randomName}`);
-        } catch (e) {
-            reply(e.toString())
-        }
-            
 
           break;
           case 'mix': { 
@@ -802,7 +631,7 @@ case 'ytv':
  break;
  
           case "script": case "repo": case "sc": 
- client.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c75efecf7f0aef851fc02.jpg' }, caption: `You can deploy this bot using the github link below!\n\nhttps://github.com/Fortunatusmokaya/DREADED-GPT-AI\n\nFork and give us a star ✨.\n\nMade on Earth by Humans!` }, {quoted: m}); 
+ client.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/c75efecf7f0aef851fc02.jpg' }, caption: `You can deploy this bot using the github link below!\n\nhttps://github.com/mrjuice01/error\n\nFork and give us a star ✨.\n\nMade on Earth by Mr Juice!` }, {quoted: m}); 
   
  break; 
 

@@ -30,8 +30,8 @@ You will need an openai API key for AI features to work.
 </h2>
 
 <p align="center" >
-    <a href="https://heroku.com/deploy?template=https://github.com/Fortunatusmokaya/DREADED-GPT-AI">
-    <img title="DREADED on Heroku" src="https://www.herokucdn.com/deploy/button.png" width="189px" alt="Deploy on Heroku" >
+    <a href="https://heroku.com/deploy?template=https://github.com/mrjuice01/DREADED">
+    <img title="BAYMAX on Heroku" src="https://www.herokucdn.com/deploy/button.png" width="189px" alt="Deploy on Heroku" >
     </a>
 </p>
      
@@ -44,7 +44,7 @@ You will need an openai API key for AI features to work.
 
 ```bash
 $ pkg install git nodejs -y
-$ git clone https://github.com/Fortunatusmokaya/DREADED-GPT-AI
+$ git clone https://github.com/mrjuice01/DREADED
 $ cd DREADED-GPT-AI
 $ npm install
 ```
@@ -57,7 +57,7 @@ $ node index.js
 
 
 ## License
-[MIT License](https://github.com/Fortunatusmokaya/DREADED-GPT-AI/blob/main/LICENSE)
+[MIT License](https://github.com/mrjuice01/DREADED/blob/main/LICENSE)
 
 Copyright (c) 2023 Dreaded AI-ChatGpt
 
